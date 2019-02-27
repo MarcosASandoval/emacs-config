@@ -47,3 +47,6 @@
              ;; optional fuzzy matching for helm-M-x
              (setq helm-M-x-fuzzy-match t))
 
+(use-package helm-ag
+  :ensure t)
+

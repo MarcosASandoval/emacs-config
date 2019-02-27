@@ -9,7 +9,7 @@
 (require 'package)
 (setq package-enable-at-startup nil)
 (setq package-archives (append package-archives
-		        '(("melpa" . "http://melpa.org/packages/")
+		        '(("melpa" . "https://melpa.org/packages/")
 		        ("marmalade" . "https://marmalade-repo.org/packages/")
 		        ("gnu" . "http://elpa.gnu.org/packages/")
 		        ("elpy" . "http://jorgenschaefer.github.io/packages/"))))
@@ -25,26 +25,6 @@
   (require 'use-package))
 
 
-;; EVIL
-(use-package evil
-	     :ensure t
-	     :config
-	     (require 'evil)
-	     (evil-mode 1))
-
-
-;; EVIL surround
-(use-package evil-surround
-	     :ensure t
-             :config
-             (global-evil-surround-mode 1))
-
-;; EVIL escape
-(use-package evil-escape
-             :ensure t
-             :config
-             (evil-escape-mode))
-
 ;; SLIME
 (use-package slime
              :ensure t
@@ -53,13 +33,15 @@
              (setq slime-contribs '(slime-fancy)))
 
 (load-file "~/.emacs.d/config/helm-config.el")
+(load-file "~/.emacs.d/config/major-modes.el")
+(load-file "~/.emacs.d/config/evil.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (evil use-package))))
+ '(package-selected-packages (quote (magit helm-ag php-mode evil use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
