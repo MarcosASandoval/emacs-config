@@ -5,6 +5,7 @@
 (setq mac-command-key-is-meta t)
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier nil)
+(setq-default indent-tabs-mode nil)
 
 (require 'package)
 (setq package-enable-at-startup nil)
@@ -35,13 +36,17 @@
 (load-file "~/.emacs.d/config/helm-config.el")
 (load-file "~/.emacs.d/config/major-modes.el")
 (load-file "~/.emacs.d/config/evil.el")
+(load-file "~/.emacs.d/config/minor-modes.el")
+(load-file "~/.emacs.d/config/utilities.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (magit helm-ag php-mode evil use-package))))
+ '(package-selected-packages
+   (quote
+    (paredit smart-tabs-mode parinfer magit helm-ag php-mode evil use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
