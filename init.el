@@ -38,6 +38,7 @@
 ;;(load-file "~/.emacs.d/config/evil.el")
 (load-file "~/.emacs.d/config/minor-modes.el")
 (load-file "~/.emacs.d/config/utilities.el")
+(load-file "~/.emacs.d/config/keymap.el")
 
 
 (custom-set-variables
@@ -47,7 +48,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (paredit smart-tabs-mode parinfer magit helm-ag php-mode evil use-package))))
+    (json-mode paredit smart-tabs-mode parinfer magit helm-ag php-mode evil use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
