@@ -1,3 +1,7 @@
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
+
 ;; set a couple of default key options
 ;; mostly around using the Command keys as meta to allow the option keys
 ;; as option in order to allow non-ascii characters to be typed
