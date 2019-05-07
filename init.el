@@ -37,13 +37,13 @@
              (setq inferior-lisp-program "/usr/local/bin/sbcl")
              (setq slime-contribs '(slime-fancy)))
 
+(load-file "~/.emacs.d/ace-jump-mode.el")
 (load-file "~/.emacs.d/config/helm-config.el")
 (load-file "~/.emacs.d/config/major-modes.el")
 ;;(load-file "~/.emacs.d/config/evil.el")
 (load-file "~/.emacs.d/config/minor-modes.el")
 (load-file "~/.emacs.d/config/utilities.el")
 (load-file "~/.emacs.d/config/keymap.el")
-
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
