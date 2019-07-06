@@ -1,8 +1,6 @@
 ;; PHP
 (use-package php-mode
-             :ensure t
-             :config
-             (require 'php-ext))
+             :ensure t)
 
 
 ;; Magit -- woot! --

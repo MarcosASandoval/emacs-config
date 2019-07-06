@@ -36,6 +36,8 @@
              (setq inferior-lisp-program "/usr/local/bin/sbcl")
              (setq slime-contribs '(slime-fancy)))
 
+(unless (package-installed-p 's)
+  (package-install 's))
 (load-file "~/.emacs.d/ace-jump-mode.el")
 (load-file "~/.emacs.d/config/helm-config.el")
 (load-file "~/.emacs.d/config/major-modes.el")
@@ -51,7 +53,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (haskell-mode json-mode paredit smart-tabs-mode parinfer magit helm-ag php-mode evil use-package))))
+    (s geben haskell-mode json-mode paredit smart-tabs-mode parinfer magit helm-ag php-mode evil use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
