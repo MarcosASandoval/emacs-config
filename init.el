@@ -38,25 +38,23 @@
 
 (unless (package-installed-p 's)
   (package-install 's))
-(load-file "~/.emacs.d/ace-jump-mode.el")
-(load-file "~/.emacs.d/config/helm-config.el")
+(load-file "~/.emacs.d/vendor/ace-jump-mode.el")
+;; (load-file "~/.emacs.d/config/helm-config.el")
 (load-file "~/.emacs.d/config/major-modes.el")
 (load-file "~/.emacs.d/config/evil.el")
 (load-file "~/.emacs.d/config/minor-modes.el")
 (load-file "~/.emacs.d/config/utilities.el")
 (load-file "~/.emacs.d/config/keymap.el")
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (s geben haskell-mode json-mode paredit smart-tabs-mode parinfer magit helm-ag php-mode evil use-package))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+;; get rid of the pesky configs that emacs adds automatically.
+;; why?
+;; because I like installing, trying, and often, uninstalling packages.
+;; One side effect of allowing emacs to place the custom-set-variables
+;; and others here is that after removing or commenting out a config -
+;; this config loads those packages - the package will be loaded again
+;; due to Emacs setting the package-selected-packages to all packages
+;; which it has loaded at any point.
+;; We can get away from this by either editing the custom values, or
+;; by moving these generated values to a location that will not be loaded
+;; by this file.
+(setq custom-file (concat user-emacs-directory "/custom.el"))

@@ -1,3 +1,22 @@
+;; Let's try it the recursive way
+(defun cartesian-product (l)
+  "Takes a list of lists and returns a list of all possible combinations of the elements in each list"
+  (cond ((null l) nil)
+        ((null (cdr l)) (car l))
+        ((not (null (cdr l)))
+         (dolist (x (car l) value)
+           (dolist (y (cdr l) value)
+             (setq value (append x y)))))))
+
+
+(setq x `((1 2 3) (4 5 6) (7 8 9)))
+(setq y `((1 2 3) (4 5 6)))
+
+(cartesian-product y)
+(cartesian-product x)
+
+
+
 ;; what do we want to do?
 
 ;; We want to define a string as a template
