@@ -29,16 +29,6 @@
 (eval-when-compile
   (require 'use-package))
 
-;; SLIME
-(use-package slime
-             :ensure t
-             :init
-             (setq inferior-lisp-program "/usr/local/bin/sbcl")
-             (setq slime-contribs '(slime-fancy)))
-
-(unless (package-installed-p 's)
-  (package-install 's))
-(load-file "~/.emacs.d/vendor/ace-jump-mode.el")
 ;; (load-file "~/.emacs.d/config/helm-config.el")
 (load-file "~/.emacs.d/config/major-modes.el")
 (load-file "~/.emacs.d/config/evil.el")
@@ -58,4 +48,3 @@
 ;; by moving these generated values to a location that will not be loaded
 ;; by this file.
 (setq custom-file (concat user-emacs-directory "/custom.el"))
-
