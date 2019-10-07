@@ -14,6 +14,6 @@
              (setq inferior-lisp-program "/usr/local/bin/sbcl")
              (setq slime-contribs '(slime-fancy)))
 
-;; SLIME
+;; Haskell Mode
 (use-package haskell-mode
              :ensure t)

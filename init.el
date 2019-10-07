@@ -11,6 +11,13 @@
 (setq mac-option-modifier nil)
 (setq-default indent-tabs-mode nil)
 
+;; Just some stuff
+(setq auto-save-default nil)
+(global-auto-revert-mode t)
+(setq ido-enable-flex-matching t)
+(setq ido-everwhere t)
+(ido-mode 1)
+
 (require 'package)
 (setq package-enable-at-startup nil)
 (setq package-archives (append package-archives
