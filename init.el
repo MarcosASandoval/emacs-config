@@ -41,7 +41,14 @@
 (load-file "~/.emacs.d/config/evil.el")
 (load-file "~/.emacs.d/config/minor-modes.el")
 (load-file "~/.emacs.d/config/utilities.el")
+(load-file "~/.emacs.d/generators/cartesian-product.el")
+(load-file "~/.emacs.d/vendor/ace-jump-mode.el")
 (load-file "~/.emacs.d/config/keymap.el")
+(autoload
+  'ace-jump-mode
+  "ace-jump-mode"
+  "Emacs quick move minor mode"
+  t)
 
 ;; get rid of the pesky configs that emacs adds automatically.
 ;; why?
@@ -55,3 +62,4 @@
 ;; by moving these generated values to a location that will not be loaded
 ;; by this file.
 (setq custom-file (concat user-emacs-directory "/custom.el"))
+(put 'narrow-to-region 'disabled nil)
