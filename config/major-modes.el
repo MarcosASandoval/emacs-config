@@ -17,3 +17,7 @@
 ;; Haskell Mode
 (use-package haskell-mode
              :ensure t)
+
+;; JSON mode
+(use-package json-mode
+  :ensure t)

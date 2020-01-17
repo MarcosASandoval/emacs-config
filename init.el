@@ -14,9 +14,6 @@
 ;; Just some stuff
 (setq auto-save-default nil)
 (global-auto-revert-mode t)
-(setq ido-enable-flex-matching t)
-(setq ido-everwhere t)
-(ido-mode 1)
 
 (require 'package)
 (setq package-enable-at-startup nil)
@@ -41,7 +38,7 @@
 (load-file "~/.emacs.d/config/evil.el")
 (load-file "~/.emacs.d/config/minor-modes.el")
 (load-file "~/.emacs.d/config/utilities.el")
-(load-file "~/.emacs.d/generators/cartesian-product.el")
+;;(load-file "~/.emacs.d/generators/cartesian-product.el")
 (load-file "~/.emacs.d/vendor/ace-jump-mode.el")
 (load-file "~/.emacs.d/config/keymap.el")
 (autoload

@@ -10,3 +10,9 @@
   :ensure t
   :config (setq geben-path-mappings '(("/Users/marcos/repos/blink" "/var/www/mas/")))
   (add-hook 'geben-mode-hook 'evil-emacs-state))
+
+(use-package company
+  :ensure t)
+
+;; Enable hunspell
+(setenv "DICTIONARY" "en_GB")
