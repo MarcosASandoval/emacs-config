@@ -21,3 +21,7 @@
 ;; JSON mode
 (use-package json-mode
   :ensure t)
+
+;; YAML mode
+(use-package yaml-mode
+  :ensure t)
